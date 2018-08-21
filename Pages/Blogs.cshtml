@@ -1,0 +1,13 @@
+@page
+@model BlogsModel
+@{
+    ViewData["Title"] = "Blogs";
+}
+
+@foreach(var blog in Model.Blogs)
+{
+    <div class="col-md-3">
+        <h2><a href="Article/@blog.Id">@blog.Title</a></h2>
+        <p>@blog.Content</p>
+    </div>
+}
